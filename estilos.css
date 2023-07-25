@@ -129,6 +129,7 @@ body {
 .inputGroup select {
   flex-grow: 1;
   text-align: right;
+  background-color: #ffffff;
 }
 
 .inputGroup input::placeholder,
