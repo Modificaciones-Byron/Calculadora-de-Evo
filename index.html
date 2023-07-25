@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.9., user-scalable=0">
+    <title>Calculadora de Evo</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="Calculadora.js"></script>
+    <meta name="google" content="notranslate"> <!-- Evitar traducción -->
+ 
+<!-- Sistema para que no haga Zoom y se desplaze de arriba hacía abajo -->
+<script>
+   // Desactivar el zoom en dispositivos móviles
+        document.addEventListener('touchmove', function (event) {
+            event.preventDefault();
+        }, { passive: false });
+</script>
+    <!-- Borrar y redireccionar a la misma pagina-->
+<script>
+  function resetFormAndRedirect() {
+    // Obtener el formulario
+    var form = document.querySelector('.EvoForm');
+
+    // Restablecer los campos del formulario
+    form.reset();
+
+    // Redirigir a otra página web dentro de tu propio sitio web
+    window.location.href = 'index.html';
+  }
+</script>
+<!-- AVION -->
+
+</head>
+<body>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center"><br>
+        <h3 class="animate-charcter">CALCULADORA DE EVO</h3> 
+      </div> 
+    </div><br><br>
+    <div class="calculator">
+      <form class="EvoForm">
+        <div class="formGrid">
+          <div class="inputGroup">
+            <label for="CurrentEvo">EVO ACTUAL&nbsp;:</label>
+            <input id="CurrentEvo" placeholder="Ingresar Evo" />&nbsp;&nbsp;<img src="ev.png" alt="" class="pp">
+          </div>
+          <div class="inputGroup">
+            <label for="Credits">CREDITOS &nbsp;A&nbsp;:</label>
+            <input id="Credits" placeholder="Ingresar la cantidad de Creditos" /> &nbsp;&nbsp;<img src="cd.png" alt="" class="pp">
+          </div>
+          <div class="inputGroup">
+            <label for="Gold">ORO ACTUAL:</label>
+            <input id="Gold" placeholder="Ingresar la cantidad de Oro" />&nbsp;&nbsp; <img src="oro.png" alt="" class="pp">
+          </div>
+          <div class="inputGroup">
+            <label for="Discount">DESCUENTO&nbsp;:</label>
+            <select id="Discount" class="styledSelect">
+              <option value="0">0%</option>
+              <option value="50">50%</option>
+              <option value="60">60%</option>
+              <option value="70">70%</option>
+              <option value="80">80%</option>
+              <option value="90">90%</option>
+            </select>&nbsp;&nbsp;<img src="dc.png" alt="" class="pp">
+          </div>
+        </div>
+        <br>
+        <div id="result">
+        </div>
+        <br>
+        <div class="button-container">
+          <button type="button" class="custom-button" onclick=" animacionAv(); doCalculate(); doSomethingElse(); ">Calcular</button>
+
+          <button class="custom-button" type="button" onclick="resetFormAndRedirect()">Borrar</button>
+        </div>
+      </form>
+    </div>
+<!-- Boton Regresar 1% --> <br><br><a href="#" class="btn1" >Descargar App</a><!-- Boton Regresar 100%-->
+    
+  </div>
+  <br>
+  <br>
+  <br>
+  <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                <p> 2023 ByronStudios. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

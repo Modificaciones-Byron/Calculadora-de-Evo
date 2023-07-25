@@ -1,0 +1,291 @@
+/* Cuerpo general */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+/* Contenedor de todo */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Letras de calculadora de evo */
+.animate-charcter {
+  position: relative;
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg, #00FFFF 0%, #00ff00 29%, #ff1361 67%, #fff800 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #e2d5d5;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 35px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Boton de Regresar */
+.btn1 {
+  text-align: center;
+  display: inline-block;
+  padding: 20px 35px;
+  background-color: #00ff00;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  font-size: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn1:hover {
+  background-color: rgb(255, 0, 0);
+}
+/* Diseño de calculadora: tamaño, color, bordes, centro y estructura */
+
+.calculator {
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #222222;
+  border-radius: 5px;
+  padding: 30px;
+  color: /*#00ff00*/;
+  border: 4px solid rgb(0, 255, 0);
+  text-shadow: /*0 0 10px rgba(0, 255, 0, 0.8)*/;
+  border-radius: 10px;
+  animation: lightingEffect 0.1s infinite;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.custom-button {
+  background-color: rgb(0, 255, 0);
+  text-shadow: 0 0 10px rgba(75, 171, 15, 0.8);
+  color: rgb(16, 20, 16);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.custom-button:first-child {
+  margin-right: 10px;
+}
+
+.custom-button:last-child {
+  margin-left: 10px;
+}
+
+.custom-button:hover {
+  background-color: rgba(64, 224, 208, 8);                    box-shadow: 0 0 19px rgba(64, 224, 208, 0.8); /* Sombreado turquesa fosforescente */ }
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.inputGroup label {
+  flex-basis: 45%;
+  margin-right: 15px;
+  text-align: left;
+}
+
+.inputGroup input,
+.inputGroup select {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.inputGroup input::placeholder,
+.inputGroup select::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  outline: none;
+  background-color: rgb(12, 255, 239);
+  grid-row: 100px;
+}
+
+
+#result {
+  color: rgb(241, 222, 18);
+  font-size: 19px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* xdddd */
+.black-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+}
+
+.background-gif-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+
+.gif-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  width: 100%;
+}
+
+/* Color de texto para CurrentEvo */
+.inputGroup label[for="CurrentEvo"] {
+  color: #8cc63f; /* Light green color */
+  text-shadow: 0 0 19px #91ff80;
+  animation: blinkShadow 1s infinite;
+}
+
+@keyframes blinkShadow {
+  0%, 100% {
+    text-shadow: 9px 9px 19px #91ff80; /* Estado inicial y final del brillo */
+  }
+  50% {
+    text-shadow: none; /* Estado intermedio sin sombra */
+  }
+}
+
+/* Color de texto de Descuento en Rojo */
+.inputGroup label[for="Discount"] {
+  color: #FF0000; /* Rojo */
+  text-shadow: 0 0 19px #FF6347; /* Rojo más bajo */
+  animation: blinkShadow 1s infinite; /* Animación que parpadea infinitamente */
+}
+
+@keyframes blinkShadow {
+  0%, 100% {
+    text-shadow: 9 9 10px #FF6347; /* Estado inicial y final del brillo */
+  }
+  50% {
+    text-shadow: none; /* Estado intermedio sin sombra */
+  }
+}
+
+/*Color de texto creditos*/
+.inputGroup label[for="Credits"] {
+  color: #99b5cb;
+  text-shadow: 0 0 19px #51778e;
+  animation: blinkShadow 1s infinite; /* Animación que parpadea infinitamente */
+}
+
+@keyframes blinkShadow {
+  0%, 100% {
+    text-shadow: 9 9 19px #0d517a; /* Estado inicial y final del brillo */
+  }
+  50% {
+    text-shadow: none; /* Estado intermedio sin sombra */
+  }
+}
+
+/*Color de texto de Oro*/
+.inputGroup label[for="Gold"] {
+  color: #ffff00;
+  text-shadow: 0 0 19px #FFD700;
+  animation: blinkShadow 1s infinite; /* Animación que parpadea infinitamente */
+}
+
+@keyframes blinkShadow {
+  0%, 100% {
+    text-shadow: 9 9 10px #FFD700; /* Estado inicial y final del brillo */
+  }
+  50% {
+    text-shadow: none; /* Estado intermedio sin sombra */
+  }
+}
+
+
+/*Diseño de Select Option: Altura y Ancho*/
+.styledSelect{
+    width: 85%;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+/*Diseño de Iconos de Evo, Creditos, Oro, Descuento*/
+.pp{
+    width: 25px; /* Tamaño de Iconos */
+    
+}
+
+/*Derechos de autor Google Analytis*/
+.footer-content {
+  background-color: #333;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+.footer-text p {
+  margin: 5px 0;
+}
+
+.heart {
+  color: #ff4f78;
+}
+
+.footer-text p::before {
+  content: "\00A9"; /* Código para el símbolo de derechos de autor */
+  margin-right: 5px;
+}
+
