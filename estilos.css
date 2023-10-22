@@ -275,6 +275,8 @@ body {
 
 .footer-text {
   font-size: 14px;
+  color: #03e9f4;
+  text-shadow: 0 0 10px rgba(3, 233, 244, 0.6);
 }
 
 .footer-text p {
