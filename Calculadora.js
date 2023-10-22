@@ -103,24 +103,23 @@ function doCalculate() {
 			}
 		}
 
-	// Suponiendo que ya tienes definidas las variables result y startingEVO
-
+// Suponiendo que ya tienes definidas las variables resultado y startingEVO
 result = result + increase;
 document.getElementById('result').innerText = "NUEVO EVO: " + String(result) + '\n EVOS SUBIDOS: +' + String(result - startingEVO);
 
-// Crear un nuevo elemento de imagen
-const imagen = document.createElement('img');
+// Array de nombres de archivos de GIF
+const gifNames = ['f1.gif', 'f2.webp', 'f3.gif', 'f4.gif', 'f5.gif', 'f6.gif'];
 
-// Configurar el atributo src con la ruta de la imagen que quieras mostrar
-imagen.src = 'fl.webp'; // Reemplaza 'ruta_de_la_imagen.png' con la ruta correcta de tu imagen
+// Obtener el contenedor de imágenes existentes o crear uno nuevo
+const imageContainer = document.getElementById('image-container');
 
-// Configurar el tamaño de la imagen (40px de alto, ajusta el ancho según tus necesidades)
-imagen.style.height = '40px';
+// Crear una nueva imagen
+const newImage = document.createElement('img');
+newImage.src = gifNames[imageContainer.childElementCount % gifNames.length];
+newImage.style.height = '40px';
 
-// Agregar la imagen justo después del párrafo que muestra "evos subidos"
-const evosSubidosElement = document.getElementById('result');
-evosSubidosElement.insertAdjacentElement('afterend', imagen);
-
+// Agregar la imagen al contenedor
+imageContainer.appendChild(newImage);
 }
 /* Sistema de complejidad de Evo final*/
 
