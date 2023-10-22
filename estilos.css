@@ -18,12 +18,11 @@ body {
 .logo-izquierda {
   width: 100px;
   position: relative;
-  left: -25px;
+  left: -40px;
 }
 .logo-principal {
   width: 100px;
   position: relative;
-  right: -10px;
 }
 .logo-derecha {
   width: 100px;
@@ -33,15 +32,15 @@ body {
 
 /*logos finales*/
 .ara {
-  width: 100px;
+  width: 60px;
   position: relative; /* Opcional, solo si no tienes definida ya la posición */
-  z-index: 9999;
+  z-index: 99999;
   left: -80px;
 }
 .murcii{
-  width: 100px;
+  width: 60px;
   position: relative; /* Opcional, solo si no tienes definida ya la posición */
-  z-index: 9999;
+  z-index: 99999;
   right: -80px;
 }
 /* Letras de calculadora de evo */
