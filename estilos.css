@@ -35,11 +35,13 @@ body {
 .ara {
   width: 100px;
   position: relative; /* Opcional, solo si no tienes definida ya la posición */
+  z-index: 9999;
   left: -80px;
 }
 .murcii{
   width: 100px;
   position: relative; /* Opcional, solo si no tienes definida ya la posición */
+  z-index: 9999;
   right: -80px;
 }
 /* Letras de calculadora de evo */
@@ -90,7 +92,7 @@ body {
 
 .calculator {
   max-width: 700px;
-  margin: 20px auto;
+  margin: auto;
   background-color: #222222;
   border-radius: 5px;
   padding: 30px;
