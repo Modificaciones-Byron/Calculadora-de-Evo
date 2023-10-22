@@ -14,7 +14,34 @@ body {
   text-align: center;
   font-weight: bold;
 }
+/* logos principal */
+.logo-izquierda {
+  width: 100px;
+  position: relative;
+  left: -25px;
+}
+.logo-principal {
+  width: 100px;
+  position: relative;
+  right: -10px;
+}
+.logo-derecha {
+  width: 100px;
+  position: relative;
+  right: -40px;
+}
 
+/*logos finales*/
+.ara {
+  width: 100px;
+  position: relative; /* Opcional, solo si no tienes definida ya la posición */
+  left: -80px;
+}
+.murcii{
+  width: 100px;
+  position: relative; /* Opcional, solo si no tienes definida ya la posición */
+  right: -80px;
+}
 /* Letras de calculadora de evo */
 .animate-charcter {
   position: relative;
