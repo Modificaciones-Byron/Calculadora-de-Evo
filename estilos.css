@@ -34,13 +34,11 @@ body {
 .ara {
   width: 60px;
   position: relative; /* Opcional, solo si no tienes definida ya la posición */
-  z-index: 99999;
   left: -80px;
 }
 .murcii{
   width: 60px;
   position: relative; /* Opcional, solo si no tienes definida ya la posición */
-  z-index: 99999;
   right: -80px;
 }
 /* Letras de calculadora de evo */
