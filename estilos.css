@@ -19,18 +19,16 @@ body {
   width: 100px;
   position: relative;
   left: -20px;
-  top: px;
 }
 .logo-principal {
   width: 160px;
   position: relative;
-  top: 10px;
+  top: -20px;
 }
 .logo-derecha {
   width: 100px;
   position: relative;
   right: -20px;
-  top: 6px;
 }
 
 /*logos finales*/
