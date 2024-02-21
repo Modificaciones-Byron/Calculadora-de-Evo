@@ -18,7 +18,7 @@ body {
 .logo-izquierda {
   width: 100px;
   position: relative;
-  left: -20px;
+  left: -21px;
 }
 .logo-principal {
   width: 160px;
@@ -36,7 +36,7 @@ body {
   width: 70px;
   position: relative; /* Opcional, solo si no tienes definida ya la posición */
   z-index: 9999;
-
+  right: -7.5px;
 }
 .murcii{
   width: 60px;
